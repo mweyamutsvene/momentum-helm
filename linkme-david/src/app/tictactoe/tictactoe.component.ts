@@ -25,9 +25,10 @@ export class TictactoeComponent {
 
   turn: Move = Move.Ex;
 
+  DISPLAY_MOVE = ['--', ' X ', ' O '];
+
   getSquare(position: number) {
-    const DISPLAY_MOVE = ['--', ' X ', ' O '];
-    return DISPLAY_MOVE[this.squares[position]];
+    return this.DISPLAY_MOVE[this.squares[position]];
   }
 
   clickSquare(position: number) {
@@ -52,9 +53,7 @@ export class TictactoeComponent {
       const is_winner = this.squares[win[0]];
       if (
         is_winner != Move.Nothing &&
-        win.every((pos) => {
-          return this.squares[pos] == is_winner;
-        })
+        win.every((pos) => this.squares[pos] == is_winner)
       ) {
         return is_winner;
       }
