@@ -53,7 +53,7 @@ export class TictactoeComponent {
       if (
         is_winner != Move.Nothing &&
         win.every((pos) => {
-          this.squares[pos] == is_winner;
+          return this.squares[pos] == is_winner;
         })
       ) {
         return is_winner;
