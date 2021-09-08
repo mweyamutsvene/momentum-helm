@@ -53,7 +53,7 @@ npm install --save-dev prettier prettier-eslint eslint-config-prettier
 1. *ngFor
 1. *ngFor - trackBy
 1. ng-container
-1. *ngModel - needs imported
+1. *ngModel - needs imported via `import { FormsModule } from "@angular/forms";` and added to `imports` in `app.module.ts`
 
 ## Activity
 
