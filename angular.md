@@ -61,8 +61,14 @@ Build a tic-tac-toe game with Angular
 
 Include:
 
-- a start game button
+- a start game button that clears the board
+- allow plays in empty squares with alternating "X"s and "O"s
 - a grid with 3x3 and borders using CSS
+
+Bonus:
+- detect a win
+- beautiful styles
+- utilize `for` loop(s) to create the board
 
 ## Angular Lesson 2 - Adding Ant Design
 
