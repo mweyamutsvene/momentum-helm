@@ -51,6 +51,7 @@ export class TictactoeComponent {
     for (const win of WINNINGS) {
       const is_winner = this.squares[win[0]];
       if (
+        is_winner != Move.Nothing &&
         win.every((pos) => {
           this.squares[pos] == is_winner;
         })

@@ -15,4 +15,7 @@
     <span (click)="clickSquare(8)">{{ getSquare(8) }}</span>
   </li>
 </ul>
-<div *ngIf="winner > 0">You Win! {{ this.winner }}</div>
+<div *ngIf="winner > 0; else elseBlock">You Win! {{ this.winner }}</div>
+<ng-template #elseBlock
+  >We are still playing, it's {{ this.turn }}'s turn</ng-template
+>
