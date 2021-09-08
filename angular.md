@@ -86,3 +86,8 @@ Bonus:
 - [Angular ESLint](https://github.com/angular-eslint/angular-eslint) and [Angular ESLint with Angular 11](https://github.com/angular-eslint/angular-eslint#quick-start-with-angular-before-v12)
 - [Linting Thoughts](https://dev.to/dreiv/using-eslint-and-prettier-with-vscode-in-an-angular-project-42ib)
 - [Ant CSS Component Library](https://ng.ant.design/docs/introduce/en))
+
+## useful commands
+
+* run the server `ng serve`
+* run the linter `ng lint` and to fix problems `ng lint --fix`
