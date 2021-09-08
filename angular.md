@@ -32,11 +32,6 @@ npm install --save-dev prettier prettier-eslint eslint-config-prettier
 ## Getting Oriented
 
 1. What happens when Angular starts? What's the difference between `index.html` in my codebase vs the one delivered in the browser?
-1. Creating a component - orient to files
-    - go over css
-    - templateUrl vs template
-    - adding a component manually
-1. activity - create two components
 
 ## Basics Components & Directives
 
@@ -49,13 +44,9 @@ npm install --save-dev prettier prettier-eslint eslint-config-prettier
     - encoding
     - string interpolation vs property binding (innerText)
 1. Reacting to Events - (click)
-1. *ngIf
-1. *ngFor
-1. *ngFor - trackBy
-1. ng-container
-1. *ngModel - needs imported via `import { FormsModule } from "@angular/forms";` and added to `imports` in `app.module.ts`
 
 ## Activity 
+
 Build a tic-tac-toe game with Angular
 
 Include:
@@ -65,11 +56,25 @@ Include:
 - a grid with 3x3 and borders using CSS
 
 Bonus:
+
 - detect a win
 - beautiful styles
 - utilize `for` loop(s) to create the board
 
-## Angular Lesson 2 - Adding Ant Design
+## Angular Lesson 2
+
+1. *ngIf
+1. *ngFor
+1. *ngFor - trackBy
+1. ng-container
+1. *ngModel - needs imported via `import { FormsModule } from "@angular/forms";` and added to `imports` in `app.module.ts`
+1. Creating a component - orient to files
+    - go over css
+    - templateUrl vs template
+    - adding a component manually
+1. activity - create two components
+
+## Angular Lesson 3 - Adding Ant Design
 
 1. ngStyle
 1. ngClass
