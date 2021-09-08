@@ -91,3 +91,18 @@ Bonus:
 
 * run the server `ng serve`
 * run the linter `ng lint` and to fix problems `ng lint --fix`
+
+## adding git the remote
+
+1. starting in the "..." (top-right) menu on the "Source Control" in VS Code, click "Remote"
+1. click "Add Remote".
+1. Provide a url to the repository here: `https://github.com/momentum-projects/momentum-helm.git`.
+1. Provide a name like "momentum"
+
+Whenever you want to fetch new changes and merge from my repository:
+
+1. Click the "..." on the "Source Control" Tab
+1. Click "Pull/Push"
+1. Click "Pull from..."
+1. Click the repository you added earlier, "momentum"
+1. Click "momentum/main" as the branch
