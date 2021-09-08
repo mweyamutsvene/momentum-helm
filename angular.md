@@ -66,7 +66,6 @@ Include:
 
 ## Angular Lesson 2 - Adding Ant Design
 
-1. ElementRef - passed to constructor `element.nativeElement.classList.add("class1")`
 1. ngStyle
 1. ngClass
 1. install
