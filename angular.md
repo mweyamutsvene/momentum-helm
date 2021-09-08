@@ -12,12 +12,12 @@
 ```bash
 npm install -g @angular/cli@v11-lts
 
-ng new -S resume-[yourname]
+ng new -S linkme-[yourname]
 # Yes - type-checking
 # Yes - add routing
 # Use SCSS for our CSS language
 
-cd resume-[yourname]
+cd linkme-[yourname]
 npm i -D @angular-eslint/template-parser@4
 ng add @angular-eslint/schematics
 ng g @angular-eslint/schematics:convert-tslint-to-eslint --remove-tslint-if-no-more-tslint-targets --ignore-existing-tslint-config
@@ -55,8 +55,7 @@ npm install --save-dev prettier prettier-eslint eslint-config-prettier
 1. ng-container
 1. *ngModel - needs imported via `import { FormsModule } from "@angular/forms";` and added to `imports` in `app.module.ts`
 
-## Activity
-
+## Activity 
 Build a tic-tac-toe game with Angular
 
 Include:
