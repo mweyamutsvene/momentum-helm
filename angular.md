@@ -45,7 +45,7 @@ npm install --save-dev prettier prettier-eslint eslint-config-prettier
     - string interpolation vs property binding (innerText)
 1. Reacting to Events - (click)
 
-## Activity 
+## Activity
 
 Build a tic-tac-toe game with Angular
 
@@ -94,8 +94,8 @@ Bonus:
 
 ## useful commands
 
-* run the server `ng serve`
-* run the linter `ng lint` and to fix problems `ng lint --fix`
+- run the server `ng serve`
+- run the linter `ng lint` and to fix problems `ng lint --fix`
 
 ## adding git the remote
 
