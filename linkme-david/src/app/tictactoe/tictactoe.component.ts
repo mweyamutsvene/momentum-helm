@@ -6,7 +6,7 @@ export enum Move {
   Oh = 2,
 }
 @Component({
-  selector: 'app-tictactoe',
+  selector: '#app-tictactoe',
   templateUrl: './tictactoe.component.html',
   styleUrls: ['./tictactoe.component.scss'],
 })
