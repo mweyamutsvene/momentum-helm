@@ -12,12 +12,23 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      this.profiles[0].firstName = 'Bob';
+      this.firstProfileSet = 'Bob"&<head>';
       this.profiles[1].firstName = 'Thomas';
     }, 3000);
   }
 
   firstProfile() {
     return this.profiles[0];
+  }
+
+  get firstProfileGet() {
+    return this.firstProfile();
+  }
+  set firstProfileSet(value: string) {
+    this.firstProfile().firstName = value;
+  }
+
+  onClick() {
+    this.firstProfileSet = 'Atul';
   }
 }
