@@ -10,11 +10,14 @@
 ## starting a project
 
 ```bash
-nvm install --lts
-nvm use --lts
 npm install -g @angular/cli@v11-lts
 
-ng new -S resume-david
+ng new -S resume-[yourname]
+# Yes - type-checking
+# Yes - add routing
+# Use SCSS for our CSS language
+
+cd resume-[yourname]
 npm i -D @angular-eslint/template-parser@4
 ng add @angular-eslint/schematics
 ng g @angular-eslint/schematics:convert-tslint-to-eslint --remove-tslint-if-no-more-tslint-targets --ignore-existing-tslint-config
@@ -63,7 +66,7 @@ Include:
 
 ## Angular Lesson 2 - Adding Ant Design
 
-1. ElementRef
+1. ElementRef - passed to constructor `element.nativeElement.classList.add("class1")`
 1. ngStyle
 1. ngClass
 1. install
@@ -76,6 +79,6 @@ Include:
 ## resources
 
 - [Angular Directives](https://angular.io/guide/built-in-directives)
-- [Angular ESLint](https://github.com/angular-eslint/angular-eslint)
+- [Angular ESLint](https://github.com/angular-eslint/angular-eslint) and [Angular ESLint with Angular 11](https://github.com/angular-eslint/angular-eslint#quick-start-with-angular-before-v12)
 - [Linting Thoughts](https://dev.to/dreiv/using-eslint-and-prettier-with-vscode-in-an-angular-project-42ib)
 - [Ant CSS Component Library](https://ng.ant.design/docs/introduce/en))
