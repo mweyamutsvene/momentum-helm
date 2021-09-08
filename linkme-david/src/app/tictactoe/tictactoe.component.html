@@ -1,18 +1,27 @@
 <ul>
   <li>
-    <span (click)="clickSquare(0)">{{ getSquare(0) }}</span> |
-    <span (click)="clickSquare(1)">{{ getSquare(1) }}</span> |
-    <span (click)="clickSquare(2)">{{ getSquare(2) }}</span>
+    <span
+      *ngFor="let pos of [0, 1, 2]; last as isLast"
+      (click)="clickSquare(pos)"
+    >
+      {{ getSquare(pos) }} <span *ngIf="!isLast"> | </span>
+    </span>
   </li>
   <li>
-    <span (click)="clickSquare(3)">{{ getSquare(3) }}</span> |
-    <span (click)="clickSquare(4)">{{ getSquare(4) }}</span> |
-    <span (click)="clickSquare(5)">{{ getSquare(5) }}</span>
+    <span
+      *ngFor="let pos of [3, 4, 5]; last as isLast"
+      (click)="clickSquare(pos)"
+    >
+      {{ getSquare(pos) }} <span *ngIf="!isLast"> | </span>
+    </span>
   </li>
   <li>
-    <span (click)="clickSquare(6)">{{ getSquare(6) }}</span> |
-    <span (click)="clickSquare(7)">{{ getSquare(7) }}</span> |
-    <span (click)="clickSquare(8)">{{ getSquare(8) }}</span>
+    <span
+      *ngFor="let pos of [6, 7, 8]; last as isLast"
+      (click)="clickSquare(pos)"
+    >
+      {{ getSquare(pos) }} <span *ngIf="!isLast"> | </span>
+    </span>
   </li>
 </ul>
 <div *ngIf="winner > 0; else elseBlock">You Win! {{ this.winner }}</div>
