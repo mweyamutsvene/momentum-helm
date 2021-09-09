@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-experience',
@@ -7,4 +7,11 @@ import { Component, Input } from '@angular/core';
 })
 export class ExperienceComponent {
   @Input() experience!: string[];
+  @Output() newExperienceEvent = new EventEmitter<string>();
+
+  newExperience: string = '';
+
+  onNewExperience() {
+    this.newExperienceEvent.emit(this.newExperience);
+  }
 }
