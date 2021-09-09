@@ -7,7 +7,7 @@ import Profile from '../profile.model';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent {
-  @Input() profiles!: Profile[];
+  @Input() profile!: Profile;
   @Input() name!: string;
 
   constructor() {}
