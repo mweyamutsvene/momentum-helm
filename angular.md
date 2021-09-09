@@ -96,6 +96,7 @@ Bonus:
 
 - run the server `ng serve`
 - run the linter `ng lint` and to fix problems `ng lint --fix`
+- create a component `ng generate component <name-of-component>` or `ng g c <name-of-component>`
 
 ## adding git the remote
 
