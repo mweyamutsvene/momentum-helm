@@ -11,4 +11,8 @@ export class ProfileComponent {
   @Input() name!: string;
 
   constructor() {}
+
+  onNewExperience(experience: string) {
+    this.profile.experience.push(experience);
+  }
 }

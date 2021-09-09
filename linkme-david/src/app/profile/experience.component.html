@@ -7,7 +7,12 @@
       [(ngModel)]="newExperience"
       type="text"
     />
-    <button nz-button nzType="primary" (click)="onNewExperience()">
+    <button
+      [disabled]="!newExperience"
+      nz-button
+      nzType="primary"
+      (click)="onNewExperience()"
+    >
       Add new experience
     </button>
   </div>

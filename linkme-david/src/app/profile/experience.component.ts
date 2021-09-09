@@ -12,6 +12,9 @@ export class ExperienceComponent {
   newExperience: string = '';
 
   onNewExperience() {
-    this.newExperienceEvent.emit(this.newExperience);
+    if (this.newExperience) {
+      this.newExperienceEvent.emit(this.newExperience);
+    }
+    this.newExperience = '';
   }
 }
