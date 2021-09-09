@@ -1,11 +1,8 @@
 <h1 nz-typography>{{ name }}</h1>
 
 <div>
-  <p>First Name: {{ profile.firstName }}</p>
-  <p>Last Name: {{ profile.lastName }}</p>
+  <p>First Name: {{ profileObject.firstName }}</p>
+  <p>Last Name: {{ profileObject.lastName }}</p>
 </div>
 
-<app-experience
-  [experience]="profile.experience"
-  (newExperienceEvent)="onNewExperience($event)"
-></app-experience>
+<app-experience [profile]="profile"></app-experience>

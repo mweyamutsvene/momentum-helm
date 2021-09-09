@@ -1,39 +1,23 @@
-import {
-  Component,
-  EventEmitter,
-  ElementRef,
-  Input,
-  Output,
-  OnDestroy,
-  ViewChild,
-} from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ProfilesService } from '../profiles.service';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss'],
 })
-export class ExperienceComponent implements OnDestroy {
-  @Input() experience!: string[];
-  @Output() newExperienceEvent = new EventEmitter<string>();
-
-  @ViewChild('myLocalRef') myLocalRef!: ElementRef;
+export class ExperienceComponent {
+  @Input() profile!: number;
 
   newExperience: string = '';
 
-  ngOnDestroy() {
-    console.log('destroy');
-    // unsubscribe
-    // cancel http request
+  constructor(public profilesService: ProfilesService) {}
+
+  get experience() {
+    return this.profilesService.getProfile(this.profile).experience;
   }
 
   onNewExperience() {
-    console.log(this.myLocalRef.nativeElement);
-
-    console.log(this.myLocalRef);
-    if (this.newExperience) {
-      this.newExperienceEvent.emit(this.newExperience);
-    }
-    this.newExperience = '';
+    this.profilesService.addExperience(this.profile, this.newExperience);
   }
 }
