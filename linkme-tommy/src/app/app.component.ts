@@ -10,6 +10,7 @@ import Board, {Square} from './board.model';
 export class AppComponent implements OnInit {
   board!: Board;
   turn: boolean = false
+  gameWinner: Square = Square.none
   ngOnInit() {
     let squares:Square[][] = [[Square.none, Square.none, Square.none],
                               [Square.none, Square.none, Square.none],
@@ -17,8 +18,19 @@ export class AppComponent implements OnInit {
     this.board = new Board(squares)
   }
 
+  isGameOver() {
+    if(this.gameWinner == Square.o || this.gameWinner == Square.x || this.boardIsFull(this.board.board) == true) {
+      return true
+    }
+    return false
+  }
+
   gameOver(){
     let value = this.findWinner(this.board.board,3)
+    if (value != null) {
+      this.gameWinner = value
+    }
+    
     switch (value) {
       case 0: {
         return "Winner is X"
