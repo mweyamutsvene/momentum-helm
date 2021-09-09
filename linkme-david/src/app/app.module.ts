@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProfileComponent } from './profile/profile.component';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { ExperienceComponent } from './profile/experience.component';
 
 registerLocaleData(en);
@@ -25,6 +26,7 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NzLayoutModule,
     NzTypographyModule,
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
