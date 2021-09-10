@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChanges, OnDestroy } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ProfilesService } from '../profiles.service';
 
 @Component({
