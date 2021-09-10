@@ -4,6 +4,80 @@
 
 1. [Countries](https://countries.trevorblades.com/)
 
+```
+GET -> https://www.example.com/api/users/
+<- list of users
+
+{
+  users: [
+    {
+      id: 1,
+      name: "Spencer",
+      birthday: "Saturday"
+    },
+    {
+      id: 2,
+      name: "Peter",
+      birthday: "Monday"
+    }
+  ]
+}
+
+POST - creating an object
+https://www.example.com/api/users/
+{
+  name: "Spencer",
+  birthday: "Saturday"
+}
+RESPONSE - 200
+{
+  id: 5,
+  name: "Spencer",
+  birthday: "Saturday"
+}
+
+PATCH - WRITE
+https://www.example.com/api/users/5
+{
+  birthday: "Sunday"
+}
+RESPONSE - 200
+{
+  id: 5,
+  name: "Spence",
+  birthday: "Saturday"
+  connections: [
+    {
+      id: 3,
+
+
+    },4,5]
+}
+
+https://www.example.com/api/users/5/connections?userDetail=true
+https://www.example.com/api/connections/?user=5
+
+
+{
+  id: 5,
+  name: "Spence",
+  birthday: "Saturday"
+  connections: [3,4,6]
+}
+
+N
+https://www.example.com/api/users/3
+https://www.example.com/api/users/4
+https://www.example.com/api/users/6
+
+
+
+```
+
+no way to control what fields we get back
+
+FIND: continents and their countries that start with N
+
 ## Skills
 
 [Intro](https://graphql.org/learn/queries/)
@@ -94,6 +168,24 @@ fragment comparisonFields on Character {
 ## Getting Started - GraphQL
 
 1. [Github GraphQL Explorer](https://docs.github.com/en/graphql/overview/explorer)
+
+```graphql
+query { 
+  user(login:"drasch") {
+    login
+    avatarUrl
+    email
+    repositories(first: 20, privacy: PUBLIC) {
+      totalCount
+      nodes {
+        name
+        url
+      }
+    }
+  }
+}
+```
+
 1. [Fields on a User](https://docs.github.com/en/graphql/reference/objects#user)
 1. [public apis](https://github.com/APIs-guru/graphql-apis)
 
